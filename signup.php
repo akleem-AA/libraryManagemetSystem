@@ -12,7 +12,7 @@ if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
 //Code for student ID
 $count_my_page = ("studentid.txt");
 $hits = file($count_my_page);
-$hits[0] ++;
+$hits[0]++;
 $fp = fopen($count_my_page , "w");
 fputs($fp , "$hits[0]");
 fclose($fp); 
@@ -52,7 +52,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Online Library Management System | Student Signup</title>
+    <title>Online Library Management System | Student Sign-up</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -98,7 +98,7 @@ error:function (){}
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">User Signup</h4>
+                <h4 class="header-line">User Sign-up</h4>
                 
                             </div>
 
@@ -108,7 +108,7 @@ error:function (){}
 <div class="col-md-9 col-md-offset-1">
                <div class="panel panel-danger">
                         <div class="panel-heading">
-                           SINGUP FORM
+                           SING-UP FORM
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
@@ -140,7 +140,7 @@ error:function (){}
 </div>
  <div class="form-group">
 <label>Verification code : </label>
-<input type="text"  name="vercode" maxlength="5" autocomplete="off" required style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
+<input type="text"  name="vercode" maxlength="4" autocomplete="off" required style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
 </div>                                
 <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now </button>
 

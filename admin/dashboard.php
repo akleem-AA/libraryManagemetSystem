@@ -100,7 +100,7 @@ $returnedbooks=$query2->rowCount();
                             <i class="fa fa-users fa-5x"></i>
                             <?php 
 $sql3 ="SELECT id from tblstudents ";
-$query3 = $dbh -> prepare($sql1);
+$query3 = $dbh -> prepare($sql3);
 $query3->execute();
 $results3=$query3->fetchAll(PDO::FETCH_OBJ);
 $regstds=$query3->rowCount();
@@ -120,8 +120,8 @@ $regstds=$query3->rowCount();
                       <div class="alert alert-success back-widget-set text-center">
                             <i class="fa fa-user fa-5x"></i>
 <?php 
-$sq4 ="SELECT id from tblauthors ";
-$query4 = $dbh -> prepare($sql);
+$sql4 ="SELECT id from tblauthors ";
+$query4 = $dbh -> prepare($sql4);
 $query4->execute();
 $results4=$query4->fetchAll(PDO::FETCH_OBJ);
 $listdathrs=$query4->rowCount();
@@ -139,7 +139,7 @@ $listdathrs=$query4->rowCount();
                             <i class="fa fa-file-archive-o fa-5x"></i>
 <?php 
 $sql5 ="SELECT id from tblcategory ";
-$query5 = $dbh -> prepare($sql1);
+$query5 = $dbh -> prepare($sql5);
 $query5->execute();
 $results5=$query5->fetchAll(PDO::FETCH_OBJ);
 $listdcats=$query5->rowCount();

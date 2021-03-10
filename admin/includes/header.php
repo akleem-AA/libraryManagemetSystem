@@ -9,7 +9,7 @@
                 <a class="navbar-brand" >
 
                     <img id="img1" src="assets/img/logo.jpg" />
-                    <span class="title">Krishna Group Of College</span>
+                    <span class="title"> Krishna Group Of College</span>
                 </a>
 
             </div>      

@@ -36,11 +36,11 @@ else
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" >
+           <a class="navbar-brand" >
 
-                    <img id="img2" src="assets/img/logo1.jpg" />
-                </a>
-
+            <img id="img1" src="assets/img/logo.jpg" />
+                 <span class="title"> Krishna Group Of College</span>
+            </a>
             </div>
 <?php if($_SESSION['login'])
 {
@@ -136,4 +136,23 @@ $returnedbooks=$query2->rowCount();
     <script src="assets/js/custom.js"></script>
     
 </body>
+<style>
+     #img1{
+        position: relative;
+        height: 120px;
+        margin-left: 200px;
+    }
+    .menu-section{
+        margin-top: 50px;
+    }
+
+    .navbar-brand{
+        display:inline;
+    }
+    .title{
+        font-size:60px;
+        font-family:serif;
+    }
+    </style>
+   
 </html>

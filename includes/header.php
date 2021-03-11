@@ -8,8 +8,8 @@
                 </button>
                 <a class="navbar-brand" >
 
-                    <img id="img1" src="assets/img/logo.jpg" />
-                    <span class="title">Krishna Group Of College</span>
+                    <a href="#"><img id="img1" src="assets/img/logo.jpg" ></a>
+                    <span ><a href="#"target="_blank" class="title" >Krishna Group Of College</a> </span>
                 </a>
 
             </div>
@@ -85,7 +85,7 @@
     .navbar-brand{
         display:inline;
     }
-    .title{
+    .title {
         font-size:60px;
         font-family:serif;
     }

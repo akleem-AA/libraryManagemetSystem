@@ -28,8 +28,8 @@ else
 </head>
 <body>
  <!------MENU SECTION START-->
-  
-        <div class="container">
+    <div class="color">
+        <div class="container ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -52,6 +52,7 @@ else
          
     <br />
     <br />
+</div>
 <?php include('includes/header1.php');?>
 <!-- MENU SECTION END-->
     <div class="content-wrapper">
@@ -110,6 +111,7 @@ $returnedbooks=$query2->rowCount();
             
     </div>
     </div>
+
     <style>
         
     #img2{
@@ -153,6 +155,9 @@ $returnedbooks=$query2->rowCount();
         font-size:60px;
         font-family:serif;
     }
+    /* .color{
+        background-color:#edf1f1;
+    } */
     </style>
    
 </html>

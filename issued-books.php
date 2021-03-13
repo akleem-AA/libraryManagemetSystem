@@ -43,7 +43,7 @@ header('location:manage-books.php');
 </head>
 <body>
       <!------MENU SECTION START-->
-    <div class="container">
+    <div class="container color">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -194,4 +194,7 @@ foreach($results as $result)
         font-size:60px;
         font-family:serif;
     }
+    /* .color{
+        background-color:#edf1f1;
+    } */
     </style>

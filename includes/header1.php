@@ -1,7 +1,7 @@
 <?php if($_SESSION['login'])
 {
 ?>    
-<section class="menu-section">
+<section class="menu-section background-color">
         <div class="container">
             <div class="row ">
                 <div class="col-md-12">
@@ -47,4 +47,9 @@
             </div>
         </div>
     </section>
+    <style>
+        .background-color{
+    background-color: #edf1f1;
+}
+    </style>
     <?php } ?>

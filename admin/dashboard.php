@@ -66,7 +66,7 @@ $listdbooks=$query->rowCount();
                       <div class="alert alert-info back-widget-set text-center">
                             <i class="fa fa-bars fa-5x"></i>
 <?php 
-$sql1 ="SELECT id from tblissuedbookdetails ";
+$sql1 ="SELECT * FROM library.tblissuedbookdetails i join tblbooks b on b.id = i.bookId where ReturnDate is null group by i.bookid";
 $query1 = $dbh -> prepare($sql1);
 $query1->execute();
 $results1=$query1->fetchAll(PDO::FETCH_OBJ);
@@ -83,16 +83,16 @@ $issuedbooks=$query1->rowCount();
                             <i class="fa fa-recycle fa-5x"></i>
 <?php 
 $status=1;
-$sql2 ="SELECT id from tblissuedbookdetails where RetrunStatus=:status";
+$sql2 ="SELECT * FROM library.tblbooks";
 $query2 = $dbh -> prepare($sql2);
-$query2->bindParam(':status',$status,PDO::PARAM_STR);
+//$query2->bindParam(':status',$status,PDO::PARAM_STR);
 $query2->execute();
 $results2=$query2->fetchAll(PDO::FETCH_OBJ);
 $returnedbooks=$query2->rowCount();
 ?>
 
-                            <h3><?php echo htmlentities($returnedbooks);?></h3>
-                          Times  Books Returned
+                            <h3><?php echo htmlentities($returnedbooks-$issuedbooks);?></h3>
+                            Books In Store
                         </div>
                     </div>
                <div class="col-md-3 col-sm-3 col-xs-6">

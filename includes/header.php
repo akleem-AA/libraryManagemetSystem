@@ -1,4 +1,4 @@
-
+    <div class="background-color">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -9,7 +9,7 @@
                 <a class="navbar-brand" >
 
                     <a href="#"><img id="img1" src="assets/img/logo.jpg" ></a>
-                    <span ><a href="#"target="_blank" class="title" >Krishna Group Of College</a> </span>
+                    <span ><a href="#"target="_blank" class="title" >Krishna Group Of College's</a> </span>
                 </a>
 
             </div>
@@ -52,6 +52,7 @@
             </div>
         </div>
     </section>
+
     <?php } else { ?>
         <section class="menu-section">
         <div class="container">
@@ -72,6 +73,7 @@
             </div>
         </div>
     </section>
+    </div>
 <style>
     #img1{
         position: relative;
@@ -89,5 +91,9 @@
         font-size:60px;
         font-family:serif;
     }
+    .background-color{
+        background-color:#edf1f1;
+    }
+
     </style>
     <?php } ?>

@@ -1,4 +1,5 @@
-   <section class="footer-section">
+   
+   <section class="footer-section background-color">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -8,3 +9,9 @@
             </div>
         </div>
     </section>  
+
+    <style>
+        .background-color{
+    background-color: #edf1f1;
+}
+    </style>

@@ -1,4 +1,4 @@
-
+    <div class="background-color">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -7,7 +7,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" >
-
                     <img id="img1" src="assets/img/logo.jpg" />
                     <span class="title"> Krishna Group Of College</span>
                 </a>
@@ -57,7 +56,7 @@
                             </li>
                              <li><a href="reg-students.php">Reg Students</a></li>
                     
-  <li><a href="change-password.php">Change Password</a></li>
+                          <li><a href="change-password.php">Change Password</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,6 +64,7 @@
             </div>
         </div>
     </section>
+    </div>
 <style>
      #img1{
         position: relative;
@@ -82,5 +82,9 @@
         font-size:60px;
         font-family:serif;
     }
+    .background-color{
+        background-color:#edf1f1;
+
+        }
     </style>
    

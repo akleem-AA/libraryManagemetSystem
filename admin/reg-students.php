@@ -13,7 +13,7 @@ if(isset($_GET['inid']))
 {
 $id=$_GET['inid'];
 $status=0;
-$sql = "update tblstudents set Status=:status  WHERE id=:id";
+$sql = "update tblstudents set Status=:status  WHERE StudentId=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> bindParam(':status',$status, PDO::PARAM_STR);
@@ -28,7 +28,7 @@ if(isset($_GET['id']))
 {
 $id=$_GET['id'];
 $status=1;
-$sql = "update tblstudents set Status=:status  WHERE id=:id";
+$sql = "update tblstudents set Status=:status  WHERE StudentId=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> bindParam(':status',$status, PDO::PARAM_STR);
@@ -122,10 +122,10 @@ foreach($results as $result)
                                             <td class="center">
 <?php if($result->Status==1)
  {?>
-<a href="reg-students.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to block this student?');"" >  <button class="btn btn-danger"> Inactive</button>
+<a href="reg-students.php?inid=<?php echo htmlentities($result->StudentId);?>" onclick="return confirm('Are you sure you want to block this student?');"" >  <button class="btn btn-danger"> Inactive</button>
 <?php } else {?>
 
-                                            <a href="reg-students.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to active this student?');""><button class="btn btn-primary"> Active</button> 
+                                            <a href="reg-students.php?id=<?php echo htmlentities($result->StudentId);?>" onclick="return confirm('Are you sure you want to active this student?');""><button class="btn btn-primary"> Active</button> 
                                             <?php } ?>
                                           
                                             </td>

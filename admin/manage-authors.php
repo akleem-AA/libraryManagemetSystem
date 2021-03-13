@@ -120,7 +120,7 @@ header('location:manage-authors.php');
                                         </tr>
                                     </thead>
                                     <tbody>
-<?php $sql = "SELECT * from  tblauthors";
+<?php $sql = "SELECT * from  tblauthors order by CreationDate desc";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

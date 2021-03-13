@@ -3,7 +3,7 @@ require_once("includes/config.php");
 if(!empty($_POST["bookid"])) {
   $bookid=$_POST["bookid"];
  
-    $sql ="SELECT BookName,id FROM tblbooks WHERE (ISBNNumber=:bookid)";
+    $sql ="SELECT BookName,b.id FROM tblbooks b inner join tblcategory c on c.id = b.CatId WHERE ISBNNumber=:bookid or BookName like '%$bookid%' or c.CategoryName like '%$bookid%' ";
 $query= $dbh -> prepare($sql);
 $query-> bindParam(':bookid', $bookid, PDO::PARAM_STR);
 $query-> execute();

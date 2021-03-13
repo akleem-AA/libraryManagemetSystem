@@ -53,10 +53,10 @@ function getstudent() {
 $("#loaderIcon").show();
 jQuery.ajax({
 url: "get_student.php",
-data:'studentid='+$("#studentid").val(),
-type: "POST",
+//data:'studentid='+$("#studentid").val(),
+type: "GET",
 success:function(data){
-$("#get_student_name").html(data);
+$("#studentlist").html(data);
 $("#loaderIcon").hide();
 },
 error:function (){}
@@ -77,6 +77,7 @@ $("#loaderIcon").hide();
 error:function (){}
 });
 }
+
 
 </script> 
 <style type="text/css">
@@ -112,8 +113,10 @@ Issue a New Book
 <form role="form" method="post">
 
 <div class="form-group">
-<label>Srtudent id<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="studentid" id="studentid" onBlur="getstudent()" autocomplete="off"  required />
+<label>Student id<span style="color:red;">*</span></label>
+<input class="form-control" list='studentlist' type="text" name="studentid" id="studentid" autocomplete="off"  required />
+<datalist id="studentlist">
+</datalist>
 </div>
 
 <div class="form-group">
@@ -126,7 +129,7 @@ Issue a New Book
 
 <div class="form-group">
 <label>ISBN Number or Book Title<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="booikid" id="bookid" onBlur="getbook()"  required="required" />
+<input class="form-control" type="text" name="booikid" id="bookid" onkeyup="getbook()"  required="required" />
 </div>
 
  <div class="form-group">
@@ -156,7 +159,9 @@ Issue a New Book
     <script src="assets/js/bootstrap.js"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
-
+    <script>
+        getstudent();
+    </script>
 </body>
 </html>
 <?php } ?>
